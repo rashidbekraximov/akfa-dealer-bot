@@ -34,7 +34,7 @@ public class GeneralCommand implements Command<Long> {
         // Add the settings command
         KeyboardRow firstRow = new KeyboardRow();
         firstRow.add(bundle.getString("label.command.day.end"));
-        firstRow.add(bundle.getString("label.command.daily"));
+//        firstRow.add(bundle.getString("label.command.daily"));
         keyboardRows.add(firstRow);
 
         // Add the settings command

@@ -4,12 +4,11 @@ package uz.duol.akfadealerbot.service.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import uz.duol.akfadealerbot.dto.*;
 import uz.duol.akfadealerbot.service.ExternalDataService;
 
 import java.util.Base64;
@@ -19,22 +18,22 @@ import java.util.Base64;
 @RequiredArgsConstructor
 public class ExternalDataServiceImpl implements ExternalDataService {
 
-    @Value("report.username")
+    @Value("${akfa.report.username}")
     private String username;
 
-    @Value("report.password")
+    @Value("${akfa.report.password}")
     private String password;
 
-    @Value("report.url")
+    @Value("${akfa.report.url}")
     private String url;
 
     private final RestTemplate restTemplate;
 
     @Override
-    public String fetchData() {
+    public ApiResponse<Invoice> fetchCaptionData(Long dealerId, String period) {
         String auth = username + ":" + password;
 
-        // Java 8 Base64 kodlash
+        /* Java 8 Base64 kodlash */
         String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes());
 
         HttpHeaders headers = new HttpHeaders();
@@ -42,14 +41,109 @@ public class ExternalDataServiceImpl implements ExternalDataService {
 
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        // Log yozish: so'rov URL va sarlavhalar
-        log.info("Sending request to URL: {}", url);
-        log.info("Request headers: {}", headers);
-        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
-
-        // Log yozish: javob
-        log.info("Received response: {}", response.getBody());
+        String formattedUrl = String.format(url + "report?dealer_id=%s&type=%s",dealerId,period);
+        ResponseEntity<ApiResponse<Invoice>> response = restTemplate.exchange(formattedUrl, HttpMethod.GET, entity, new ParameterizedTypeReference<>() {});
+        handleResponseStatus(response, "Caption ma'lumotlari ");
         return response.getBody();
     }
 
+
+    @Override
+    public ApiResponse<InvoicePieChartSale> fetchPieChartOperations(Long dealerId, String period) {
+        String base_url = url + "pie-chart/invoices?type=%s&dealerId=%s";
+        String auth = username + ":" + password;
+
+        String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes());
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Basic " + encodedAuth);
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        String formattedUrl = String.format(base_url,period,dealerId);
+
+        ResponseEntity<ApiResponse<InvoicePieChartSale>> response = restTemplate.exchange(formattedUrl, HttpMethod.GET, entity, new ParameterizedTypeReference<>() {});
+        handleResponseStatus(response, "Savdo operatsiyalari");
+        return response.getBody();
+    }
+
+    @Override
+    public ApiResponse<InvoicePieChartClient> fetchPieChartClients(Long dealerId, String period) {
+        String base_url = url + "pie-chart/dealer-clients?type=%s&dealerId=%s";
+        String auth = username + ":" + password;
+
+        String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes());
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Basic " + encodedAuth);
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+        String formattedUrl = String.format(base_url,period,dealerId);
+        ResponseEntity<ApiResponse<InvoicePieChartClient>> response = restTemplate.exchange(formattedUrl, HttpMethod.GET, entity, new ParameterizedTypeReference<>() {});
+        handleResponseStatus(response, "Mijozlar");
+        return response.getBody();
+    }
+
+    @Override
+    public ApiResponse<ProductGroupBarChart> fetchProductGroupBarChart(Long dealerId, String period) {
+        String base_url = url + "bar-chart/product-groups?type=%s&dealerId=%s";
+        String auth = username + ":" + password;
+
+        String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes());
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Basic " + encodedAuth);
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+        String formattedUrl = String.format(base_url,period,dealerId);
+
+        ResponseEntity<ApiResponse<ProductGroupBarChart>> response = restTemplate.exchange(formattedUrl, HttpMethod.GET, entity, new ParameterizedTypeReference<>() {});
+        handleResponseStatus(response, "Tovar guruhlari");
+        return response.getBody();
+    }
+
+    @Override
+    public ApiResponse<FinanceOperation> fetchFinanceOperationLineChart(Long dealerId, String period) {
+        String base_url = url + "line-chart/payment-receipt?type=%s&dealerId=%s";
+        String auth = username + ":" + password;
+
+        String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes());
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Basic " + encodedAuth);
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        String formattedUrl = String.format(base_url,period,dealerId);
+
+        ResponseEntity<ApiResponse<FinanceOperation>> response = restTemplate.exchange(formattedUrl, HttpMethod.GET, entity, new ParameterizedTypeReference<>() {});
+        handleResponseStatus(response, "Moliyaviy operatsiyalar");
+        return response.getBody();
+    }
+
+    @Override
+    public ApiResponse<SalesOperation> fetchSaleOperationLineChart(Long dealerId, String period) {
+        String base_url = url + "line-chart/invoices?type=%s&dealerId=%s";
+        String auth = username + ":" + password;
+
+        String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes());
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Basic " + encodedAuth);
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        String formattedUrl = String.format(base_url,period,dealerId);
+
+        ResponseEntity<ApiResponse<SalesOperation>> response = restTemplate.exchange(formattedUrl, HttpMethod.GET, entity, new ParameterizedTypeReference<>() {});
+        handleResponseStatus(response, "Soatlik savdo");
+        return response.getBody();
+    }
+
+    private void handleResponseStatus(ResponseEntity<?> response, String operationName) {
+        if (response.getStatusCode().equals(HttpStatus.OK)) {
+            log.info("{} muvaffaqiyatli olingan: {}", operationName, response.getBody());
+        } else {
+            log.error("{} ni olishda xatolik yuz berdi: Status = {}", operationName, response.getStatusCode());
+        }
+    }
 }

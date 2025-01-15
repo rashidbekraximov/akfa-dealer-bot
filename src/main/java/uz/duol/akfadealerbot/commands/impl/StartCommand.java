@@ -6,10 +6,8 @@ import uz.duol.akfadealerbot.commands.Actions;
 import uz.duol.akfadealerbot.commands.Command;
 import uz.duol.akfadealerbot.dto.MessageSend;
 import uz.duol.akfadealerbot.entity.ClientEntity;
-import uz.duol.akfadealerbot.entity.DealerEntity;
 import uz.duol.akfadealerbot.service.ClientActionService;
 import uz.duol.akfadealerbot.service.ClientService;
-import uz.duol.akfadealerbot.service.DealerService;
 import uz.duol.akfadealerbot.service.TelegramService;
 import uz.duol.akfadealerbot.utils.R;
 
@@ -37,7 +35,7 @@ public class StartCommand implements Command<Long> {
             telegramService.sendMessage(new MessageSend(chatId, getWelcomeText(),Commands.createLanguageKeyboard()));
             return;
         }
-        if (client.getDealer() != null && client.getDealer().isVerified()){
+        if (client.getUser() != null && client.getUser().isVerified()){
             generalCommand.execute(chatId, locale);
         }else if (client.getLanguage() == null){
             telegramService.sendMessage(new MessageSend(chatId, getWelcomeText(), Commands.createLanguageKeyboard()));

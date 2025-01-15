@@ -2,7 +2,6 @@ package uz.duol.akfadealerbot.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.JdbcTypeCode;
 import org.springframework.beans.BeanUtils;
 import uz.duol.akfadealerbot.constants.TableNames;
 import uz.duol.akfadealerbot.dto.ClientDto;
@@ -26,8 +25,8 @@ public class ClientEntity extends BaseEntity {
     private String phone;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "dealer_id", referencedColumnName = "id")
-    private DealerEntity dealer;
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private UserEntity user;
 
     @Column(name = "first_name")
     private String firstName;
@@ -47,11 +46,10 @@ public class ClientEntity extends BaseEntity {
     public ClientDto getDto() {
         ClientDto clientDto = new ClientDto();
         BeanUtils.copyProperties(this, clientDto);
-        if (getDealer() != null) {
-            clientDto.setDealer(getDealer().getDto());
+        if (getUser() != null) {
+            clientDto.setUser(getUser());
         }
         return clientDto;
     }
-
 }
 

@@ -6,15 +6,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.User;
 import uz.duol.akfadealerbot.dto.ClientDto;
-import uz.duol.akfadealerbot.dto.DealerDto;
 import uz.duol.akfadealerbot.entity.ClientEntity;
-import uz.duol.akfadealerbot.entity.DealerEntity;
+import uz.duol.akfadealerbot.entity.UserEntity;
 import uz.duol.akfadealerbot.repository.ClientRepository;
-import uz.duol.akfadealerbot.repository.DealerRepository;
 import uz.duol.akfadealerbot.service.ClientService;
-import uz.duol.akfadealerbot.service.DealerService;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -54,6 +50,7 @@ public class ClientServiceImpl implements ClientService {
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
                 .username(user.getUserName())
+                .language("uz")
                 .build();
 
         try {
@@ -66,11 +63,11 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public void update(DealerEntity dealer, Long chatId) {
+    public void update(UserEntity user, Long chatId) {
         ClientEntity client = findByTelegramId(chatId);
         try {
             if (client != null){
-                client.setDealer(dealer);
+                client.setUser(user);
                 clientRepository.save(client);
                 log.info("Klient ma'lumotlari yangilandi: {}", client);
             }
@@ -82,11 +79,11 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public ClientDto updateLanguage(Long chatId, String language) {
-        ClientEntity dealer = findByTelegramId(chatId);
-        dealer.setLanguage(language);
+        ClientEntity user = findByTelegramId(chatId);
+        user.setLanguage(language);
         try {
             log.info("Klientning tili yangilandi: {}. Yangi til: {}", chatId, language);
-            return clientRepository.save(dealer).getDto();
+            return clientRepository.save(user).getDto();
         } catch (Exception e) {
             log.error("Klientning tilini yangilab bo‘lmadi: {}. Xato: {}", chatId, e.getMessage(), e);
             throw new RuntimeException("Klient tilini yangilab bo‘lmadi: " + e.getMessage(), e);
@@ -95,7 +92,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public List<ClientDto> findAllByDealerIsVerified() {
-        return clientRepository.findAllByDealerIsNotNull().stream().map(ClientEntity::getDto).collect(Collectors.toList());
+        return clientRepository.findAllByUserIsNotNullAndUserIsActiveTrue().stream().map(ClientEntity::getDto).collect(Collectors.toList());
     }
 
     @Override
@@ -104,7 +101,12 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
+    public boolean userIsActiveByChatId(Long chatId) {
+        return clientRepository.existActiveUserByChatId(String.valueOf(chatId));
+    }
+
+    @Override
     public boolean existByDealerCode(String code) {
-        return clientRepository.existsByDealer_Code(code);
+        return clientRepository.existsByUser_Code(code);
     }
 }

@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.springframework.beans.BeanUtils;
 import uz.duol.akfadealerbot.dto.base.BaseDto;
 import uz.duol.akfadealerbot.entity.ClientEntity;
+import uz.duol.akfadealerbot.entity.UserEntity;
 
 import java.time.LocalDateTime;
 import java.util.Locale;
@@ -15,7 +16,7 @@ public class ClientDto extends BaseDto {
 
     private Long chatId;
 
-    private DealerDto dealer;
+    private UserEntity user;
 
     private String phone;
 

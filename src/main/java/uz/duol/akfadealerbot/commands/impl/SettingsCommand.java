@@ -29,6 +29,9 @@ public class SettingsCommand implements Command<Long> {
                         add(bundle.getString("label.command.settings.language"));
                     }});
                     add(new KeyboardRow() {{
+                        add(bundle.getString("label.command.call-center"));
+                    }});
+                    add(new KeyboardRow() {{
                         add(bundle.getString("label.command.back"));
                     }});
                 }})));
