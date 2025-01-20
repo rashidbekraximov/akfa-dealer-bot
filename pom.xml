@@ -13,23 +13,8 @@
     <version>0.0.1</version>
     <name>akfa-dealer-bot</name>
     <description>akfa-dealer-bot</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
     <properties>
         <java.version>17</java.version>
-<!--        <maven.compiler.source>17</maven.compiler.source>-->
-<!--        <maven.compiler.target>17</maven.compiler.target>-->
     </properties>
     <dependencies>
         <dependency>
@@ -64,7 +49,6 @@
             <artifactId>jaxb-api</artifactId>
             <version>2.3.1</version>
         </dependency>
-
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
@@ -87,7 +71,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <finalName>akfa-dealer</finalName>
         <plugins>
@@ -97,5 +80,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

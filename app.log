@@ -1,157 +1,47 @@
-2025-01-14T09:39:54.423+05:00  INFO 26600 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Starting AkfaDealerBotApplication using Java 20.0.1 with PID 26600 (D:\duol\akfa-dealer-bot\target\classes started by rashi in D:\duol\akfa-dealer-bot)
-2025-01-14T09:39:54.428+05:00  INFO 26600 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : The following 1 profile is active: "dev"
-2025-01-14T09:39:55.302+05:00  INFO 26600 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-14T09:39:55.354+05:00  INFO 26600 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
-2025-01-14T09:39:55.791+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6060 (http)
-2025-01-14T09:39:55.801+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-14T09:39:55.801+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-01-14T09:39:55.841+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-14T09:39:55.842+05:00  INFO 26600 --- [akfa-dealer-bot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1372 ms
-2025-01-14T09:39:55.946+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-14T09:39:55.988+05:00  INFO 26600 --- [akfa-dealer-bot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-01-14T09:39:56.022+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-14T09:39:56.160+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-14T09:39:56.176+05:00  INFO 26600 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-14T09:39:56.329+05:00  INFO 26600 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@635ff2a5
-2025-01-14T09:39:56.330+05:00  INFO 26600 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-14T09:39:57.012+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-14T09:39:57.117+05:00  INFO 26600 --- [akfa-dealer-bot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-14T09:39:57.420+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-01-14T09:39:57.973+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c9616bb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@269fe2fe, org.springframework.security.web.context.SecurityContextHolderFilter@76a90ecb, org.springframework.security.web.header.HeaderWriterFilter@3272c5b3, org.springframework.web.filter.CorsFilter@1635e239, org.springframework.security.web.authentication.logout.LogoutFilter@4ceac22d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@43ef1243, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fe75649, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@713323a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d27a744, org.springframework.security.web.access.ExceptionTranslationFilter@490e1017, org.springframework.security.web.access.intercept.AuthorizationFilter@6149adee]
-2025-01-14T09:39:59.029+05:00  INFO 26600 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6060 (http) with context path ''
-2025-01-14T09:39:59.039+05:00  INFO 26600 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Started AkfaDealerBotApplication in 4.926 seconds (process running for 8.195)
-2025-01-14T10:10:21.203+05:00 ERROR 26600 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 754258086: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
-
-java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
-	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:56) ~[classes/:na]
-	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:28) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
-	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
-	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
-	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
-Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
-	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:45) ~[classes/:na]
-	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:39) ~[classes/:na]
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
-	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
-	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
-	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
-	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
-	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
-	... 11 common frames omitted
-
-2025-01-14T11:33:14.232+05:00  INFO 18772 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Starting AkfaDealerBotApplication using Java 20.0.1 with PID 18772 (D:\duol\akfa-dealer-bot\target\classes started by rashi in D:\duol\akfa-dealer-bot)
-2025-01-14T11:33:14.234+05:00  INFO 18772 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : The following 1 profile is active: "dev"
-2025-01-14T11:33:14.635+05:00  INFO 18772 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-14T11:33:14.683+05:00  INFO 18772 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
-2025-01-14T11:33:15.102+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6060 (http)
-2025-01-14T11:33:15.110+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-14T11:33:15.110+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-01-14T11:33:15.148+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-14T11:33:15.149+05:00  INFO 18772 --- [akfa-dealer-bot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 878 ms
-2025-01-14T11:33:15.241+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-14T11:33:15.284+05:00  INFO 18772 --- [akfa-dealer-bot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-01-14T11:33:15.319+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-14T11:33:15.458+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-14T11:33:15.475+05:00  INFO 18772 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-14T11:33:15.621+05:00  INFO 18772 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@23ea8830
-2025-01-14T11:33:15.622+05:00  INFO 18772 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-14T11:33:16.269+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-14T11:33:16.366+05:00  INFO 18772 --- [akfa-dealer-bot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-14T11:33:16.652+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-01-14T11:33:17.162+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5f6e6902, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54d8236c, org.springframework.security.web.context.SecurityContextHolderFilter@6773c073, org.springframework.security.web.header.HeaderWriterFilter@4ae836cf, org.springframework.web.filter.CorsFilter@5697f801, org.springframework.security.web.authentication.logout.LogoutFilter@16cc5e51, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@199549a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75c8855e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d5aeea7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15382815, org.springframework.security.web.access.ExceptionTranslationFilter@66df2165, org.springframework.security.web.access.intercept.AuthorizationFilter@272d0dd3]
-2025-01-14T11:33:18.082+05:00  INFO 18772 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6060 (http) with context path ''
-2025-01-14T11:33:18.090+05:00  INFO 18772 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Started AkfaDealerBotApplication in 4.198 seconds (process running for 4.681)
-2025-01-14T11:34:01.230+05:00 ERROR 18772 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : Kiritilgan name boʻyicha dealer ma'lumoti topilmadi: /starrt
-2025-01-14T11:34:08.149+05:00  INFO 18772 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:load-dealers
-2025-01-14T11:34:28.230+05:00  INFO 18772 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-14T11:34:28.234+05:00  INFO 18772 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-14T11:34:28.240+05:00  INFO 18772 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-14T19:43:35.012+05:00  INFO 25224 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Starting AkfaDealerBotApplication using Java 20.0.1 with PID 25224 (D:\duol\akfa-dealer-bot\target\classes started by rashi in D:\duol\akfa-dealer-bot)
-2025-01-14T19:43:35.014+05:00  INFO 25224 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : The following 1 profile is active: "dev"
-2025-01-14T19:43:37.331+05:00  INFO 25224 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-14T19:43:37.430+05:00  INFO 25224 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 4 JPA repository interfaces.
-2025-01-14T19:43:38.296+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6060 (http)
-2025-01-14T19:43:38.308+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-14T19:43:38.309+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-01-14T19:43:38.389+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-14T19:43:38.390+05:00  INFO 25224 --- [akfa-dealer-bot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3304 ms
-2025-01-14T19:43:38.614+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-14T19:43:38.682+05:00  INFO 25224 --- [akfa-dealer-bot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-01-14T19:43:38.721+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-14T19:43:38.942+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-14T19:43:38.969+05:00  INFO 25224 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-14T19:43:39.256+05:00  INFO 25224 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6e8f2094
-2025-01-14T19:43:39.259+05:00  INFO 25224 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-14T19:43:40.466+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-14T19:43:40.626+05:00  INFO 25224 --- [akfa-dealer-bot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-14T19:43:41.246+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-01-14T19:43:42.140+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68226b59, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3674164b, org.springframework.security.web.context.SecurityContextHolderFilter@51cf17e8, org.springframework.security.web.header.HeaderWriterFilter@22912968, org.springframework.web.filter.CorsFilter@5b1e5366, org.springframework.security.web.authentication.logout.LogoutFilter@5b7e2a88, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3ac2772d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@490e1017, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ddb260e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43ef1243, org.springframework.security.web.access.ExceptionTranslationFilter@11c82829, org.springframework.security.web.access.intercept.AuthorizationFilter@7220ff10]
-2025-01-14T19:43:43.252+05:00  INFO 25224 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6060 (http) with context path ''
-2025-01-14T19:43:43.265+05:00  INFO 25224 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Started AkfaDealerBotApplication in 8.962 seconds (process running for 14.765)
-2025-01-14T19:44:31.325+05:00  INFO 25224 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-14T19:44:31.449+05:00  INFO 25224 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-14T19:44:31.671+05:00  INFO 25224 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-14T19:44:35.431+05:00  INFO 17288 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Starting AkfaDealerBotApplication using Java 20.0.1 with PID 17288 (D:\duol\akfa-dealer-bot\target\classes started by rashi in D:\duol\akfa-dealer-bot)
-2025-01-14T19:44:35.433+05:00  INFO 17288 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : The following 1 profile is active: "dev"
-2025-01-14T19:44:36.042+05:00  INFO 17288 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-14T19:44:36.122+05:00  INFO 17288 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 4 JPA repository interfaces.
-2025-01-14T19:44:36.758+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6060 (http)
-2025-01-14T19:44:36.769+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-14T19:44:36.769+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-01-14T19:44:36.829+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-14T19:44:36.829+05:00  INFO 17288 --- [akfa-dealer-bot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1347 ms
-2025-01-14T19:44:36.958+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-14T19:44:37.006+05:00  INFO 17288 --- [akfa-dealer-bot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-01-14T19:44:37.036+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-14T19:44:37.263+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-14T19:44:37.293+05:00  INFO 17288 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-14T19:44:37.444+05:00  INFO 17288 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44aa91e2
-2025-01-14T19:44:37.446+05:00  INFO 17288 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-14T19:44:38.379+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-14T19:44:38.521+05:00  INFO 17288 --- [akfa-dealer-bot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-14T19:44:38.952+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-01-14T19:44:39.733+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@766534b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f1cb802, org.springframework.security.web.context.SecurityContextHolderFilter@28878a52, org.springframework.security.web.header.HeaderWriterFilter@792a9cb1, org.springframework.web.filter.CorsFilter@1077a7, org.springframework.security.web.authentication.logout.LogoutFilter@295e9aef, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@676c3745, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f19ab6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@305230ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e0fd2dc, org.springframework.security.web.access.ExceptionTranslationFilter@cede70a, org.springframework.security.web.access.intercept.AuthorizationFilter@4ce1ab4c]
-2025-01-14T19:44:40.630+05:00  INFO 17288 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6060 (http) with context path ''
-2025-01-14T19:44:40.645+05:00  INFO 17288 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Started AkfaDealerBotApplication in 5.618 seconds (process running for 6.745)
-2025-01-14T19:44:41.427+05:00  INFO 17288 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-14T19:44:41.433+05:00  INFO 17288 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-14T19:44:41.497+05:00  INFO 17288 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-17T09:52:24.773+05:00  INFO 19488 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Starting AkfaDealerBotApplication using Java 20.0.1 with PID 19488 (D:\duol\akfa-dealer-bot\target\classes started by rashi in D:\duol\akfa-dealer-bot)
+2025-01-17T09:52:24.776+05:00  INFO 19488 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : The following 1 profile is active: "dev"
+2025-01-17T09:52:25.664+05:00  INFO 19488 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-17T09:52:25.712+05:00  INFO 19488 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 4 JPA repository interfaces.
+2025-01-17T09:52:26.128+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6060 (http)
+2025-01-17T09:52:26.138+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-17T09:52:26.138+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-01-17T09:52:26.177+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-17T09:52:26.178+05:00  INFO 19488 --- [akfa-dealer-bot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1366 ms
+2025-01-17T09:52:26.275+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-17T09:52:26.332+05:00  INFO 19488 --- [akfa-dealer-bot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-01-17T09:52:26.368+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-17T09:52:26.522+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-17T09:52:26.535+05:00  INFO 19488 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-17T09:52:26.631+05:00  INFO 19488 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64c25a62
+2025-01-17T09:52:26.632+05:00  INFO 19488 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-17T09:52:27.305+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-17T09:52:27.409+05:00  INFO 19488 --- [akfa-dealer-bot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-17T09:52:27.636+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-17T09:52:28.174+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27e25c2f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56a7f57f, org.springframework.security.web.context.SecurityContextHolderFilter@3dc976da, org.springframework.security.web.header.HeaderWriterFilter@3d2bcf0a, org.springframework.web.filter.CorsFilter@5d8edf2, org.springframework.security.web.authentication.logout.LogoutFilter@25a2a71d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@41a940a9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@495c4ce7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e283f1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@636d4cdc, org.springframework.security.web.access.ExceptionTranslationFilter@48c5a07d, org.springframework.security.web.access.intercept.AuthorizationFilter@43ef1243]
+2025-01-17T09:52:29.004+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6060 (http) with context path ''
+2025-01-17T09:52:29.012+05:00  INFO 19488 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Started AkfaDealerBotApplication in 4.507 seconds (process running for 6.961)
+2025-01-17T10:07:36.062+05:00  WARN 19488 --- [akfa-dealer-bot] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s115ms325µs200ns).
+2025-01-17T10:12:44.571+05:00  WARN 19488 --- [akfa-dealer-bot] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m38s471ms701µs300ns).
+2025-01-17T10:14:22.952+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-1] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@16a77c9
+2025-01-17T10:14:44.003+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-6] u.d.a.s.impl.ExternalDataServiceImpl     : Soatlik savdo muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@49a3e040
+2025-01-17T10:14:44.005+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-4] u.d.a.s.impl.ExternalDataServiceImpl     : Tovar guruhlari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@c401259
+2025-01-17T10:14:44.009+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-2] u.d.a.s.impl.ExternalDataServiceImpl     : Savdo operatsiyalari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@72d9d2c8
+2025-01-17T10:14:44.031+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-3] u.d.a.s.impl.ExternalDataServiceImpl     : Mijozlar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@1d36827b
+2025-01-17T10:14:45.107+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-5] u.d.a.s.impl.ExternalDataServiceImpl     : Moliyaviy operatsiyalar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@7c2b62ca
+2025-01-17T10:14:45.107+05:00  INFO 19488 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.impl.ImageProcessServiceImpl     : Diller hali sinxronizatsiya qilmagan: Jizzax-2 (Zafar Aka) (SH) Zarbdor: Id 240
+2025-01-17T10:14:45.706+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-5] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@4b59437
+2025-01-17T10:15:06.770+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-1] u.d.a.s.impl.ExternalDataServiceImpl     : Soatlik savdo muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@1b87fdce
+2025-01-17T10:15:06.772+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-2] u.d.a.s.impl.ExternalDataServiceImpl     : Mijozlar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@4cc941c2
+2025-01-17T10:15:06.772+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-4] u.d.a.s.impl.ExternalDataServiceImpl     : Tovar guruhlari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@49ef3072
+2025-01-17T10:15:06.772+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-3] u.d.a.s.impl.ExternalDataServiceImpl     : Savdo operatsiyalari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@41a921d2
+2025-01-17T10:15:06.773+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-6] u.d.a.s.impl.ExternalDataServiceImpl     : Moliyaviy operatsiyalar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@1088d14a
+2025-01-17T10:15:06.773+05:00  INFO 19488 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.impl.ImageProcessServiceImpl     : Diller hali sinxronizatsiya qilmagan: Namangan-1 (Yusufxon Aka) (Retpen): Id 137
+2025-01-17T10:15:06.928+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-6] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@47112ece
+2025-01-17T10:15:18.505+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-6] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@56106b36
+2025-01-17T10:15:27.985+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-2] u.d.a.s.impl.ExternalDataServiceImpl     : Tovar guruhlari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@6e4d7eef
+2025-01-17T10:15:27.985+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-3] u.d.a.s.impl.ExternalDataServiceImpl     : Savdo operatsiyalari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@10d9b36a
+2025-01-17T10:15:27.985+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-4] u.d.a.s.impl.ExternalDataServiceImpl     : Mijozlar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@4de4f6d3
+2025-01-17T10:15:27.994+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-1] u.d.a.s.impl.ExternalDataServiceImpl     : Moliyaviy operatsiyalar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@111476c5
+2025-01-17T10:15:27.994+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-5] u.d.a.s.impl.ExternalDataServiceImpl     : Soatlik savdo muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@5f519acf
+2025-01-17T10:15:27.994+05:00  INFO 19488 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.impl.ImageProcessServiceImpl     : Diller hali sinxronizatsiya qilmagan: Shaxrixon (Bobur Aka) (SH) Izboskan: Id 257
+2025-01-17T10:15:28.255+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-1] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@44796d12
