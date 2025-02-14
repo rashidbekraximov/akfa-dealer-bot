@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import uz.duol.akfadealerbot.constants.Period;
-import uz.duol.akfadealerbot.dto.ClientDto;
+import uz.duol.akfadealerbot.model.dto.ClientDto;
 
 import java.util.List;
 

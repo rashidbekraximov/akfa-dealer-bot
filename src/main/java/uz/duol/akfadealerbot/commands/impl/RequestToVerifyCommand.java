@@ -5,7 +5,7 @@ import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 import uz.duol.akfadealerbot.commands.Actions;
 import uz.duol.akfadealerbot.commands.Command;
-import uz.duol.akfadealerbot.dto.MessageSend;
+import uz.duol.akfadealerbot.model.dto.MessageSend;
 import uz.duol.akfadealerbot.service.ClientActionService;
 import uz.duol.akfadealerbot.service.TelegramService;
 import uz.duol.akfadealerbot.utils.R;

@@ -13,8 +13,8 @@ import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.general.DefaultPieDataset;
 import uz.duol.akfadealerbot.constants.FilePath;
-import uz.duol.akfadealerbot.dto.FinanceOperation;
-import uz.duol.akfadealerbot.dto.SalesOperation;
+import uz.duol.akfadealerbot.model.dto.FinanceOperation;
+import uz.duol.akfadealerbot.model.dto.SalesOperation;
 
 import java.awt.*;
 import java.io.File;

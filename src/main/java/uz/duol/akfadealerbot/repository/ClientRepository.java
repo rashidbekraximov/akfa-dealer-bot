@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import uz.duol.akfadealerbot.entity.ClientEntity;
+import uz.duol.akfadealerbot.model.entity.ClientEntity;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +14,8 @@ import java.util.Optional;
 public interface ClientRepository extends JpaRepository<ClientEntity,Long>, JpaSpecificationExecutor<ClientEntity> {
 
     Optional<ClientEntity> findByChatId(Long chatId);
+
+    Optional<ClientEntity> findByCode(String code);
 
     boolean existsByChatId(Long chatId);
 
@@ -24,4 +26,5 @@ public interface ClientRepository extends JpaRepository<ClientEntity,Long>, JpaS
 
     List<ClientEntity> findAllByUserIsNotNullAndUserIsActiveTrue();
 
+    boolean existsByCode(String code);
 }

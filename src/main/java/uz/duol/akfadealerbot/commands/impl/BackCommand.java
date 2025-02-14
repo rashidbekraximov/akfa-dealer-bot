@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import uz.duol.akfadealerbot.commands.Actions;
 import uz.duol.akfadealerbot.commands.Command;
-import uz.duol.akfadealerbot.dto.ClientActionDto;
+import uz.duol.akfadealerbot.model.dto.ClientActionDto;
 import uz.duol.akfadealerbot.service.ClientActionService;
 
 import java.util.Locale;

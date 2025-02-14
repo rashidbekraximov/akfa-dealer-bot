@@ -1,47 +1,994 @@
-2025-01-17T09:52:24.773+05:00  INFO 19488 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Starting AkfaDealerBotApplication using Java 20.0.1 with PID 19488 (D:\duol\akfa-dealer-bot\target\classes started by rashi in D:\duol\akfa-dealer-bot)
-2025-01-17T09:52:24.776+05:00  INFO 19488 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : The following 1 profile is active: "dev"
-2025-01-17T09:52:25.664+05:00  INFO 19488 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17T09:52:25.712+05:00  INFO 19488 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 4 JPA repository interfaces.
-2025-01-17T09:52:26.128+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6060 (http)
-2025-01-17T09:52:26.138+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-17T09:52:26.138+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-01-17T09:52:26.177+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-17T09:52:26.178+05:00  INFO 19488 --- [akfa-dealer-bot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1366 ms
-2025-01-17T09:52:26.275+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-17T09:52:26.332+05:00  INFO 19488 --- [akfa-dealer-bot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2025-01-17T09:52:26.368+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-17T09:52:26.522+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17T09:52:26.535+05:00  INFO 19488 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-17T09:52:26.631+05:00  INFO 19488 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64c25a62
-2025-01-17T09:52:26.632+05:00  INFO 19488 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-17T09:52:27.305+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-17T09:52:27.409+05:00  INFO 19488 --- [akfa-dealer-bot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17T09:52:27.636+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-01-17T09:52:28.174+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27e25c2f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56a7f57f, org.springframework.security.web.context.SecurityContextHolderFilter@3dc976da, org.springframework.security.web.header.HeaderWriterFilter@3d2bcf0a, org.springframework.web.filter.CorsFilter@5d8edf2, org.springframework.security.web.authentication.logout.LogoutFilter@25a2a71d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@41a940a9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@495c4ce7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e283f1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@636d4cdc, org.springframework.security.web.access.ExceptionTranslationFilter@48c5a07d, org.springframework.security.web.access.intercept.AuthorizationFilter@43ef1243]
-2025-01-17T09:52:29.004+05:00  INFO 19488 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6060 (http) with context path ''
-2025-01-17T09:52:29.012+05:00  INFO 19488 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Started AkfaDealerBotApplication in 4.507 seconds (process running for 6.961)
-2025-01-17T10:07:36.062+05:00  WARN 19488 --- [akfa-dealer-bot] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s115ms325µs200ns).
-2025-01-17T10:12:44.571+05:00  WARN 19488 --- [akfa-dealer-bot] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m38s471ms701µs300ns).
-2025-01-17T10:14:22.952+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-1] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@16a77c9
-2025-01-17T10:14:44.003+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-6] u.d.a.s.impl.ExternalDataServiceImpl     : Soatlik savdo muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@49a3e040
-2025-01-17T10:14:44.005+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-4] u.d.a.s.impl.ExternalDataServiceImpl     : Tovar guruhlari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@c401259
-2025-01-17T10:14:44.009+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-2] u.d.a.s.impl.ExternalDataServiceImpl     : Savdo operatsiyalari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@72d9d2c8
-2025-01-17T10:14:44.031+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-3] u.d.a.s.impl.ExternalDataServiceImpl     : Mijozlar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@1d36827b
-2025-01-17T10:14:45.107+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-5] u.d.a.s.impl.ExternalDataServiceImpl     : Moliyaviy operatsiyalar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@7c2b62ca
-2025-01-17T10:14:45.107+05:00  INFO 19488 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.impl.ImageProcessServiceImpl     : Diller hali sinxronizatsiya qilmagan: Jizzax-2 (Zafar Aka) (SH) Zarbdor: Id 240
-2025-01-17T10:14:45.706+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-5] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@4b59437
-2025-01-17T10:15:06.770+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-1] u.d.a.s.impl.ExternalDataServiceImpl     : Soatlik savdo muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@1b87fdce
-2025-01-17T10:15:06.772+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-2] u.d.a.s.impl.ExternalDataServiceImpl     : Mijozlar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@4cc941c2
-2025-01-17T10:15:06.772+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-4] u.d.a.s.impl.ExternalDataServiceImpl     : Tovar guruhlari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@49ef3072
-2025-01-17T10:15:06.772+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-3] u.d.a.s.impl.ExternalDataServiceImpl     : Savdo operatsiyalari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@41a921d2
-2025-01-17T10:15:06.773+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-6] u.d.a.s.impl.ExternalDataServiceImpl     : Moliyaviy operatsiyalar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@1088d14a
-2025-01-17T10:15:06.773+05:00  INFO 19488 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.impl.ImageProcessServiceImpl     : Diller hali sinxronizatsiya qilmagan: Namangan-1 (Yusufxon Aka) (Retpen): Id 137
-2025-01-17T10:15:06.928+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-6] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@47112ece
-2025-01-17T10:15:18.505+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-6] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@56106b36
-2025-01-17T10:15:27.985+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-2] u.d.a.s.impl.ExternalDataServiceImpl     : Tovar guruhlari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@6e4d7eef
-2025-01-17T10:15:27.985+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-3] u.d.a.s.impl.ExternalDataServiceImpl     : Savdo operatsiyalari muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@10d9b36a
-2025-01-17T10:15:27.985+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-4] u.d.a.s.impl.ExternalDataServiceImpl     : Mijozlar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@4de4f6d3
-2025-01-17T10:15:27.994+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-1] u.d.a.s.impl.ExternalDataServiceImpl     : Moliyaviy operatsiyalar muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@111476c5
-2025-01-17T10:15:27.994+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-5] u.d.a.s.impl.ExternalDataServiceImpl     : Soatlik savdo muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@5f519acf
-2025-01-17T10:15:27.994+05:00  INFO 19488 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.impl.ImageProcessServiceImpl     : Diller hali sinxronizatsiya qilmagan: Shaxrixon (Bobur Aka) (SH) Izboskan: Id 257
-2025-01-17T10:15:28.255+05:00  INFO 19488 --- [akfa-dealer-bot] [ForkJoinPool.commonPool-worker-1] u.d.a.s.impl.ExternalDataServiceImpl     : Caption ma'lumotlari  muvaffaqiyatli olingan: uz.duol.akfadealerbot.dto.ApiResponse@44796d12
+2025-02-14T09:59:35.292+05:00  INFO 28740 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Starting AkfaDealerBotApplication using Java 20.0.1 with PID 28740 (D:\duol\akfa-dealer-bot\target\classes started by rashi in D:\duol\akfa-dealer-bot)
+2025-02-14T09:59:35.297+05:00  INFO 28740 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : The following 1 profile is active: "dev"
+2025-02-14T09:59:35.697+05:00  INFO 28740 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T09:59:35.750+05:00  INFO 28740 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
+2025-02-14T09:59:36.243+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6060 (http)
+2025-02-14T09:59:36.252+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T09:59:36.253+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-02-14T09:59:36.299+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T09:59:36.299+05:00  INFO 28740 --- [akfa-dealer-bot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 967 ms
+2025-02-14T09:59:36.423+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T09:59:36.479+05:00  INFO 28740 --- [akfa-dealer-bot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-02-14T09:59:36.514+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T09:59:36.704+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T09:59:36.725+05:00  INFO 28740 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T09:59:36.870+05:00  INFO 28740 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b691611
+2025-02-14T09:59:36.871+05:00  INFO 28740 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T09:59:37.699+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T09:59:37.806+05:00  INFO 28740 --- [akfa-dealer-bot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:59:38.195+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-14T09:59:38.821+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ae25358, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10bf2726, org.springframework.security.web.context.SecurityContextHolderFilter@276511ca, org.springframework.security.web.header.HeaderWriterFilter@54422189, org.springframework.web.filter.CorsFilter@bb78f01, org.springframework.security.web.authentication.logout.LogoutFilter@7d727123, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2fd2a6a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b1c4b48, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e435f0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1caf77f6, org.springframework.security.web.access.ExceptionTranslationFilter@6a53cddc, org.springframework.security.web.access.intercept.AuthorizationFilter@45e931a9]
+2025-02-14T09:59:39.656+05:00  INFO 28740 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6060 (http) with context path ''
+2025-02-14T09:59:39.665+05:00  INFO 28740 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Started AkfaDealerBotApplication in 4.69 seconds (process running for 5.427)
+2025-02-14T10:10:21.386+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 754258086: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T10:10:42.425+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 6231621096: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T10:11:03.462+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 1250245848: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T10:11:24.492+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 398487332: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T10:11:24.497+05:00  INFO 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Barcha mijozlarga media group jo'natildi.
+2025-02-14T10:21:42.144+05:00  WARN 28740 --- [akfa-dealer-bot] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m34s908ms617µs200ns).
+2025-02-14T10:26:02.474+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T10:26:02.475+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T10:26:02.505+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2025-02-14T10:39:49.669+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=1}
+2025-02-14T10:39:49.670+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 925704920 muvaffaqiyatli tasdiqlandi.
+2025-02-14T10:39:49.710+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:main-menu
+2025-02-14T11:13:03.858+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-4] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchini Telegram hisobidan ajratish jarayoni boshlandi. Role: OWNER, ID: 140
+2025-02-14T11:13:03.882+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-4] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchining mijoz bog‘lanishi olib tashlandi. Mijoz ID: 1
+2025-02-14T11:13:03.887+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-4] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchi Telegram hisobidan muvaffaqiyatli ajratildi. Foydalanuvchi ID: 232
+2025-02-14T11:13:16.270+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:request-code
+2025-02-14T11:13:20.885+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=1}
+2025-02-14T11:13:20.886+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 925704920 muvaffaqiyatli tasdiqlandi.
+2025-02-14T11:13:20.891+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:main-menu
+2025-02-14T11:13:29.154+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-8] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchini Telegram hisobidan ajratish jarayoni boshlandi. Role: OWNER, ID: 140
+2025-02-14T11:13:29.162+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-8] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchining mijoz bog‘lanishi olib tashlandi. Mijoz ID: 1
+2025-02-14T11:13:29.164+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-8] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchi Telegram hisobidan muvaffaqiyatli ajratildi. Foydalanuvchi ID: 232
+2025-02-14T11:13:48.435+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:request-code
+2025-02-14T11:13:52.314+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=1}
+2025-02-14T11:13:52.314+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 925704920 muvaffaqiyatli tasdiqlandi.
+2025-02-14T11:13:52.317+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:main-menu
+2025-02-14T11:14:04.357+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-2] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchini Telegram hisobidan ajratish jarayoni boshlandi. Role: OWNER, ID: 140
+2025-02-14T11:14:04.365+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-2] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchining mijoz bog‘lanishi olib tashlandi. Mijoz ID: 1
+2025-02-14T11:14:04.369+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-2] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchi Telegram hisobidan muvaffaqiyatli ajratildi. Foydalanuvchi ID: 232
+2025-02-14T11:14:17.291+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:request-code
+2025-02-14T11:15:02.876+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=1}
+2025-02-14T11:15:02.876+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 925704920 muvaffaqiyatli tasdiqlandi.
+2025-02-14T11:15:02.879+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:main-menu
+2025-02-14T11:15:15.312+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-6] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchini Telegram hisobidan ajratish jarayoni boshlandi. Role: OWNER, ID: 140
+2025-02-14T11:15:15.319+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-6] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchining mijoz bog‘lanishi olib tashlandi. Mijoz ID: 1
+2025-02-14T11:15:15.322+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-6] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchi Telegram hisobidan muvaffaqiyatli ajratildi. Foydalanuvchi ID: 232
+2025-02-14T11:15:25.958+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 754258086: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T11:15:46.983+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 925704920: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T11:16:08.034+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 6231621096: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T11:16:29.086+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 1250245848: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T11:16:50.129+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 398487332: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T11:16:50.130+05:00  INFO 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Barcha mijozlarga media group jo'natildi.
+2025-02-14T11:18:50.554+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-2] u.d.a.service.impl.UserServiceImpl       : User ID: 140 va role: OWNER uchun ma'lumot o'chirildi.
+2025-02-14T11:19:05.804+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:request-code
+2025-02-14T11:19:16.778+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:request-code
+2025-02-14T11:19:24.837+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=1}
+2025-02-14T11:19:24.837+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 925704920 muvaffaqiyatli tasdiqlandi.
+2025-02-14T11:19:24.840+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:main-menu
+2025-02-14T11:19:52.034+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-3] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchini Telegram hisobidan ajratish jarayoni boshlandi. Role: OWNER, ID: 140
+2025-02-14T11:19:52.041+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-3] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchining mijoz bog‘lanishi olib tashlandi. Mijoz ID: 1
+2025-02-14T11:19:52.045+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-3] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchi Telegram hisobidan muvaffaqiyatli ajratildi. Foydalanuvchi ID: 232
+2025-02-14T11:21:15.319+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-6] u.d.a.service.impl.UserServiceImpl       : User ID: 140 va role: OWNER uchun ma'lumot o'chirildi.
+2025-02-14T11:27:54.153+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:request-code
+2025-02-14T11:28:01.637+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=1}
+2025-02-14T11:28:01.637+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 925704920 muvaffaqiyatli tasdiqlandi.
+2025-02-14T11:28:01.640+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:main-menu
+2025-02-14T11:49:01.713+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-2] u.d.a.service.impl.UserServiceImpl       : User ID: 140 va role: OWNER uchun ma'lumot o'chirildi.
+2025-02-14T11:53:51.941+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-7] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchini Telegram hisobidan ajratish jarayoni boshlandi. Role: OWNER, ID: 140
+2025-02-14T11:53:51.953+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-7] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchining mijoz bog‘lanishi olib tashlandi. Mijoz ID: 1
+2025-02-14T11:53:51.957+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-7] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchi Telegram hisobidan muvaffaqiyatli ajratildi. Foydalanuvchi ID: 232
+2025-02-14T11:54:25.540+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-8] u.d.a.service.impl.UserServiceImpl       : User ID: 140 va role: OWNER uchun ma'lumot o'chirildi.
+2025-02-14T11:55:40.838+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:request-code
+2025-02-14T11:55:42.939+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=1}
+2025-02-14T11:55:42.939+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 925704920 muvaffaqiyatli tasdiqlandi.
+2025-02-14T11:55:42.943+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 925704920, clientId: 1, action: action:main-menu
+2025-02-14T12:09:11.113+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-6] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchini Telegram hisobidan ajratish jarayoni boshlandi. Role: OWNER, ID: 141
+2025-02-14T12:09:11.127+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-6] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchining mijoz bog‘lanishi olib tashlandi. Mijoz ID: 5
+2025-02-14T12:09:11.133+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-6] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchi Telegram hisobidan muvaffaqiyatli ajratildi. Foydalanuvchi ID: 233
+2025-02-14T12:09:29.019+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 6231621096, clientId: 5, action: action:request-code
+2025-02-14T12:09:47.871+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=5}
+2025-02-14T12:09:47.872+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 6231621096 muvaffaqiyatli tasdiqlandi.
+2025-02-14T12:09:47.881+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 6231621096, clientId: 5, action: action:main-menu
+2025-02-14T12:10:04.579+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-8] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchini Telegram hisobidan ajratish jarayoni boshlandi. Role: OWNER, ID: 141
+2025-02-14T12:10:04.589+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-8] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchining mijoz bog‘lanishi olib tashlandi. Mijoz ID: 5
+2025-02-14T12:10:04.594+05:00  INFO 28740 --- [akfa-dealer-bot] [http-nio-6060-exec-8] u.d.a.service.impl.UserServiceImpl       : Foydalanuvchi Telegram hisobidan muvaffaqiyatli ajratildi. Foydalanuvchi ID: 233
+2025-02-14T12:10:07.919+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 6231621096, clientId: 5, action: action:request-code
+2025-02-14T12:10:13.255+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=5}
+2025-02-14T12:10:13.256+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 6231621096 muvaffaqiyatli tasdiqlandi.
+2025-02-14T12:10:13.265+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 6231621096, clientId: 5, action: action:main-menu
+2025-02-14T12:10:21.082+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 754258086: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T12:10:42.132+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 925704920: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T12:11:03.182+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 6231621096: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T12:11:24.240+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 1250245848: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T12:11:45.295+05:00 ERROR 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Xatolik yuz berdi mijozni qayta ishlashda: 398487332: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+
+java.util.concurrent.ExecutionException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073) ~[na:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.sendImageGroup(ImageProcessServiceImpl.java:57) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.lambda$autoImageSender$0(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at uz.duol.akfadealerbot.service.AutoDataLoaderAndMessageSender.autoImageSender(AutoDataLoaderAndMessageSender.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.12.5.jar:1.12.5]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.1.6.jar:6.1.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://192.168.7.105:1010/api/report_bot/report": Connection timed out: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701) ~[spring-web-6.1.6.jar:6.1.6]
+	at uz.duol.akfadealerbot.service.impl.ExternalDataServiceImpl.fetchCaptionData(ExternalDataServiceImpl.java:46) ~[classes/:na]
+	at uz.duol.akfadealerbot.service.impl.ImageProcessServiceImpl.lambda$sendImageGroup$0(ImageProcessServiceImpl.java:40) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:569) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:666) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:600) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar:6.1.6]
+	... 11 common frames omitted
+
+2025-02-14T12:11:45.297+05:00  INFO 28740 --- [akfa-dealer-bot] [scheduling-1] u.d.a.s.AutoDataLoaderAndMessageSender   : Barcha mijozlarga media group jo'natildi.
+2025-02-14T12:11:54.449+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 6231621096, clientId: 5, action: action:load-dealers
+2025-02-14T12:12:39.889+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 6231621096, clientId: 5, action: action:main-menu
+2025-02-14T12:14:38.405+05:00 ERROR 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient CHATID boʻyicha ma'lumot topilmadi: 7362902753
+2025-02-14T12:14:38.871+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Yangi klient muvaffaqiyatli saqlandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=10}
+2025-02-14T12:14:42.241+05:00 ERROR 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning oxirgi holat ma'lumoti topilmadi: 7362902753
+2025-02-14T12:14:42.244+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klientning tili yangilandi: 7362902753. Yangi til: uz
+2025-02-14T12:14:42.252+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 7362902753, clientId: 10, action: action:request-code
+2025-02-14T12:14:47.275+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.ClientServiceImpl     : Klient ma'lumotlari yangilandi: uz.duol.akfadealerbot.model.entity.ClientEntity{id=10}
+2025-02-14T12:14:47.275+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.service.impl.UserServiceImpl       : User: 7362902753 muvaffaqiyatli tasdiqlandi.
+2025-02-14T12:14:47.281+05:00  INFO 28740 --- [akfa-dealer-bot] [@akfa_dealer_bot Telegram Executor] u.d.a.s.impl.ClientActionServiceImpl     : Klientning harakati saqlandi: chatId: 7362902753, clientId: 10, action: action:main-menu
+2025-02-14T12:15:44.755+05:00  INFO 28740 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T12:15:44.780+05:00  INFO 28740 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T12:15:44.810+05:00  INFO 28740 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-14T12:15:59.680+05:00  INFO 6224 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Starting AkfaDealerBotApplication using Java 20.0.1 with PID 6224 (D:\duol\akfa-dealer-bot\target\classes started by rashi in D:\duol\akfa-dealer-bot)
+2025-02-14T12:15:59.683+05:00  INFO 6224 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : The following 1 profile is active: "dev"
+2025-02-14T12:16:00.563+05:00  INFO 6224 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T12:16:00.667+05:00  INFO 6224 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 4 JPA repository interfaces.
+2025-02-14T12:16:02.018+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6060 (http)
+2025-02-14T12:16:02.048+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T12:16:02.049+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-02-14T12:16:02.160+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T12:16:02.160+05:00  INFO 6224 --- [akfa-dealer-bot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2392 ms
+2025-02-14T12:16:02.382+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T12:16:02.499+05:00  INFO 6224 --- [akfa-dealer-bot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-02-14T12:16:02.585+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T12:16:03.075+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T12:16:03.144+05:00  INFO 6224 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T12:16:04.811+05:00  INFO 6224 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65af05b2
+2025-02-14T12:16:04.817+05:00  INFO 6224 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T12:16:08.224+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T12:16:08.464+05:00  INFO 6224 --- [akfa-dealer-bot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T12:16:09.236+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-14T12:16:10.569+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d12fa92, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ab87cac, org.springframework.security.web.context.SecurityContextHolderFilter@191d69a, org.springframework.security.web.header.HeaderWriterFilter@20309365, org.springframework.web.filter.CorsFilter@71e740c6, org.springframework.security.web.authentication.logout.LogoutFilter@1a61721e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1acfb04c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@616e7884, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ee4aad3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50aa5826, org.springframework.security.web.access.ExceptionTranslationFilter@28516b2d, org.springframework.security.web.access.intercept.AuthorizationFilter@3fb8e8cf]
+2025-02-14T12:16:11.992+05:00  INFO 6224 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6060 (http) with context path ''
+2025-02-14T12:16:12.017+05:00  INFO 6224 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Started AkfaDealerBotApplication in 13.073 seconds (process running for 22.535)
+2025-02-14T12:16:47.589+05:00  INFO 6224 --- [akfa-dealer-bot] [http-nio-6060-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T12:16:47.589+05:00  INFO 6224 --- [akfa-dealer-bot] [http-nio-6060-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T12:16:47.592+05:00  INFO 6224 --- [akfa-dealer-bot] [http-nio-6060-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-02-14T12:21:59.187+05:00  INFO 6224 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T12:21:59.190+05:00  INFO 6224 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T12:21:59.194+05:00  INFO 6224 --- [akfa-dealer-bot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-14T12:22:06.590+05:00  INFO 25892 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Starting AkfaDealerBotApplication using Java 20.0.1 with PID 25892 (D:\duol\akfa-dealer-bot\target\classes started by rashi in D:\duol\akfa-dealer-bot)
+2025-02-14T12:22:06.592+05:00  INFO 25892 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : The following 1 profile is active: "dev"
+2025-02-14T12:22:07.328+05:00  INFO 25892 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T12:22:07.427+05:00  INFO 25892 --- [akfa-dealer-bot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 4 JPA repository interfaces.
+2025-02-14T12:22:08.402+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 6060 (http)
+2025-02-14T12:22:08.422+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T12:22:08.422+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-02-14T12:22:08.502+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T12:22:08.503+05:00  INFO 25892 --- [akfa-dealer-bot] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1852 ms
+2025-02-14T12:22:08.745+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T12:22:08.844+05:00  INFO 25892 --- [akfa-dealer-bot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-02-14T12:22:08.906+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T12:22:09.287+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T12:22:09.326+05:00  INFO 25892 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T12:22:09.545+05:00  INFO 25892 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@580ffea
+2025-02-14T12:22:09.548+05:00  INFO 25892 --- [akfa-dealer-bot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T12:22:11.160+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T12:22:11.310+05:00  INFO 25892 --- [akfa-dealer-bot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T12:22:11.927+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-14T12:22:13.469+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6859f102, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@424769f2, org.springframework.security.web.context.SecurityContextHolderFilter@667713c4, org.springframework.security.web.header.HeaderWriterFilter@4a1b710, org.springframework.web.filter.CorsFilter@1467dcd0, org.springframework.security.web.authentication.logout.LogoutFilter@3b42d7df, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@59be715a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@178cfe5e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71bb6009, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ea6446b, org.springframework.security.web.access.ExceptionTranslationFilter@19574274, org.springframework.security.web.access.intercept.AuthorizationFilter@d471ddb]
+2025-02-14T12:22:14.989+05:00  INFO 25892 --- [akfa-dealer-bot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 6060 (http) with context path ''
+2025-02-14T12:22:15.016+05:00  INFO 25892 --- [akfa-dealer-bot] [main] u.d.a.AkfaDealerBotApplication           : Started AkfaDealerBotApplication in 8.954 seconds (process running for 9.972)
+2025-02-14T12:22:49.850+05:00  INFO 25892 --- [akfa-dealer-bot] [http-nio-6060-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T12:22:49.850+05:00  INFO 25892 --- [akfa-dealer-bot] [http-nio-6060-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T12:22:49.853+05:00  INFO 25892 --- [akfa-dealer-bot] [http-nio-6060-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-14T12:26:04.655+05:00  WARN 25892 --- [akfa-dealer-bot] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m54s952ms352µs700ns).

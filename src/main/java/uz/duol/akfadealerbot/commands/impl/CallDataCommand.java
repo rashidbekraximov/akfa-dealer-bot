@@ -4,7 +4,7 @@ import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 import uz.duol.akfadealerbot.commands.Command;
 import uz.duol.akfadealerbot.constants.FilePath;
-import uz.duol.akfadealerbot.dto.PhotoSend;
+import uz.duol.akfadealerbot.model.dto.PhotoSend;
 import uz.duol.akfadealerbot.service.TelegramService;
 
 import java.io.File;

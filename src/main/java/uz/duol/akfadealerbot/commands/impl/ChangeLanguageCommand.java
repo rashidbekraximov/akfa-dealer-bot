@@ -4,7 +4,7 @@ import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import uz.duol.akfadealerbot.commands.Command;
-import uz.duol.akfadealerbot.dto.MessageSend;
+import uz.duol.akfadealerbot.model.dto.MessageSend;
 import uz.duol.akfadealerbot.service.TelegramService;
 import uz.duol.akfadealerbot.utils.KeyboardUtils;
 import uz.duol.akfadealerbot.utils.R;

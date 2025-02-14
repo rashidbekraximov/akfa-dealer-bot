@@ -5,10 +5,14 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestParam;
 import uz.duol.akfadealerbot.constants.Role;
-import uz.duol.akfadealerbot.dto.UserDto;
-import uz.duol.akfadealerbot.entity.DealerEntity;
-import uz.duol.akfadealerbot.entity.UserEntity;
+import uz.duol.akfadealerbot.model.dto.UserDto;
+import uz.duol.akfadealerbot.model.entity.ClientEntity;
+import uz.duol.akfadealerbot.model.entity.DealerEntity;
+import uz.duol.akfadealerbot.model.entity.UserEntity;
+import uz.duol.akfadealerbot.model.response.TgUserInfo;
+import uz.duol.akfadealerbot.repository.ClientRepository;
 import uz.duol.akfadealerbot.repository.UserRepository;
 import uz.duol.akfadealerbot.service.ClientService;
 import uz.duol.akfadealerbot.service.UserService;
@@ -26,6 +30,8 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
+    private final ClientRepository clientRepository;
+
     @Override
     public UserEntity findById(Long id) {
         return userRepository.findById(id)
@@ -36,6 +42,30 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public TgUserInfo getTgInfo(String role, Long id) {
+        UserEntity user = userRepository.findByRoleAndMainId(Role.valueOf(role),id)
+                .orElseThrow(() -> new NotFoundException("User ID boʻyicha ma'lumot topilmadi: {}"));
+
+        if (user.getClient() == null){
+            return TgUserInfo.builder()
+                    .code(user.getCode())
+                    .build();
+        }
+
+        ClientEntity client = user.getClient();
+
+        return TgUserInfo.builder()
+                .chatId(client.getChatId())
+                .fullName(client.getLastName() != null
+                        ? (client.getFirstName() + " " + client.getLastName()) : client.getFirstName())
+                .phone(client.getPhone())
+                .userName(client.getUsername())
+                .code(user.getCode())
+                .verifiedDate(user.getVerifiedDate())
+                .build();
+    }
+
+    @Override
     public UserEntity loadByCode(String code) {
         return userRepository.findByCode(code)
                 .orElseGet(() -> {
@@ -43,6 +73,7 @@ public class UserServiceImpl implements UserService {
                     return null;
                 });
     }
+
 
     @Override
     public UserEntity verify(Long chatId, String code) {
@@ -104,6 +135,35 @@ public class UserServiceImpl implements UserService {
                 });
     }
 
+    @Override
+    public void deleteConnectedTelegramAccount(String role, Long id) {
+        try {
+            log.info("Foydalanuvchini Telegram hisobidan ajratish jarayoni boshlandi. Role: {}, ID: {}", role, id);
+
+            UserEntity user = userRepository.findByRoleAndMainId(Role.valueOf(role), id)
+                    .orElseThrow(() -> new NotFoundException("User topilmadi."));
+
+            user.setVerified(false);
+            user.setVerifiedDate(null);
+
+            ClientEntity client = clientRepository.findById(user.getClient().getId())
+                    .orElseThrow(() -> new NotFoundException("Client topilmadi."));
+            if (client != null) {
+                client.setUser(null);
+                clientRepository.save(client);
+                log.info("Foydalanuvchining mijoz bog‘lanishi olib tashlandi. Mijoz ID: {}", client.getId());
+            }
+
+            userRepository.save(user);
+            log.info("Foydalanuvchi Telegram hisobidan muvaffaqiyatli ajratildi. Foydalanuvchi ID: {}", user.getId());
+
+        } catch (Exception e) {
+            log.error("Foydalanuvchini Telegram hisobidan ajratishda xatolik yuz berdi. Role: {}, ID: {}, Xatolik: {}", role, id, e.getMessage(), e);
+            throw new RuntimeException("Xatolik yuz berdi: " + e.getMessage(), e);
+        }
+    }
+
+
 
     @Override
     public UserDto create(UserDto user) {
@@ -157,7 +217,7 @@ public class UserServiceImpl implements UserService {
 
     private List<DealerEntity> convertToList(String dealers) {
         if (dealers == null || dealers.trim().isEmpty()) {
-            return Collections.emptyList(); // Null yoki bo'sh stringni qayta ishlash
+            return Collections.emptyList();
         }
 
         if (!dealers.contains(",")){
@@ -165,25 +225,25 @@ public class UserServiceImpl implements UserService {
             return user.map(userEntity -> List.of(new DealerEntity(userEntity.getMainId(), userEntity.getFullName()))).orElseGet(List::of);
         }
 
-        return Arrays.stream(dealers.split(",")) // Vergul bilan ajratamiz
-                .map(String::trim) // Bo'sh joylarni kesib tashlash
-                .filter(id -> !id.isEmpty()) // Bo'sh ID'larni chiqarib tashlash
+        return Arrays.stream(dealers.split(","))
+                .map(String::trim)
+                .filter(id -> !id.isEmpty())
                 .map(id -> {
                     try {
-                        long dealerId = Long.parseLong(id); // ID ni uzun son sifatida parse qilish
+                        long dealerId = Long.parseLong(id);
                         return userRepository.findByRoleAndMainId(Role.DEALER, dealerId)
                                 .orElseGet(() -> {
                                     log.error("Dealer information not found for ID: {}", id);
                                     return null;
                                 });
                     } catch (NumberFormatException e) {
-                        log.error("Invalid dealer ID format: {}", id, e); // ID son bo'lmasa
+                        log.error("Invalid dealer ID format: {}", id, e);
                         return null;
                     }
                 })
-                .filter(Objects::nonNull) // Null qiymatlarni filtrlash
-                .map(user -> new DealerEntity(user.getMainId(), user.getFullName())) // DealerEntity yaratish
-                .collect(Collectors.toList()); // Natijani yig'ish
+                .filter(Objects::nonNull)
+                .map(user -> new DealerEntity(user.getMainId(), user.getFullName()))
+                .collect(Collectors.toList());
     }
 
 

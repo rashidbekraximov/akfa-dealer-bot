@@ -1,6 +1,6 @@
 package uz.duol.akfadealerbot.service;
 
-import uz.duol.akfadealerbot.dto.Diagram;
+import uz.duol.akfadealerbot.model.dto.Diagram;
 
 import java.io.File;
 import java.util.Locale;

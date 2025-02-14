@@ -3,14 +3,19 @@ package uz.duol.akfadealerbot.service.impl;
 import jakarta.ws.rs.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.User;
-import uz.duol.akfadealerbot.dto.ClientDto;
-import uz.duol.akfadealerbot.entity.ClientEntity;
-import uz.duol.akfadealerbot.entity.UserEntity;
+import uz.duol.akfadealerbot.model.dto.ClientDto;
+import uz.duol.akfadealerbot.model.entity.ClientEntity;
+import uz.duol.akfadealerbot.model.entity.UserEntity;
+import uz.duol.akfadealerbot.model.response.AuthResponse;
+import uz.duol.akfadealerbot.model.response.TgUserInfo;
 import uz.duol.akfadealerbot.repository.ClientRepository;
 import uz.duol.akfadealerbot.service.ClientService;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,16 +24,64 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ClientServiceImpl implements ClientService {
 
+    @Value("${authentication.code.expiry.time}")
+    private Long expiryTime;
+
     private final ClientRepository clientRepository;
+
+    @Override
+    public AuthResponse validateByCode(String code) {
+        ClientEntity client = clientRepository.findByCode(code).orElse(null);
+        if (client == null){
+            return AuthResponse.builder()
+                    .status(500)
+                    .message("Kirish kodingiz muddati o‘tgan, iltimos, uni yangilang.")
+                    .build();
+        }
+
+        if (validateExpiryDate(client.getCreatedCodeTime())){
+            return AuthResponse.builder()
+                    .status(500)
+                    .message("Bu kodning yaroqlilik muddati tugagan. Iltimos, yangi kodni kiriting.")
+                    .build();
+        }
+
+        return AuthResponse.builder()
+                .id(client.getUser().getMainId())
+                .status(200)
+                .message("Foydalanuvchi topildi")
+                .build();
+    }
+
+    @Override
+    public String generateCode(Long chatId) {
+        ClientEntity client = findByTelegramId(chatId);
+        if (client == null){
+            throw new NotFoundException("Klient ID bo'yicha ma'lumot topilmadi: {}");
+        }
+
+        String code = generateRandomCode();
+
+        try {
+            client.setCode(code);
+            client.setCreatedCodeTime(LocalDateTime.now());
+            clientRepository.save(client);
+        }catch (Exception e){
+            throw new RuntimeException("Kod yaratilmadi .");
+        }
+        return code;
+    }
 
     @Override
     public ClientEntity findById(Long id) {
         return clientRepository.findById(id)
                 .orElseThrow(() -> {
                     log.error("Klient ID boʻyicha ma'lumot topilmadi: {}", id);
-                    throw new NotFoundException("Klient ID boʻyicha ma'lumot topilmadi: {}");
+                    return new NotFoundException("Klient ID boʻyicha ma'lumot topilmadi: {}");
                 });
     }
+
+
 
     @Override
     public ClientEntity findByTelegramId(Long chatId) {
@@ -108,5 +161,26 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public boolean existByDealerCode(String code) {
         return clientRepository.existsByUser_Code(code);
+    }
+
+
+    private boolean validateExpiryDate(LocalDateTime createdCodeTime){
+        LocalDateTime now = LocalDateTime.now();
+
+        long minutesPassed = ChronoUnit.MINUTES.between(createdCodeTime, now);
+        return minutesPassed >= expiryTime;
+    }
+
+    public boolean existByCode(String code) {
+        return clientRepository.existsByCode(code);
+    }
+
+    private String generateRandomCode(){
+        String code = String.valueOf((int)(Math.random() * 90000) + 10000);
+        if (existByCode(code)){
+            return generateRandomCode();
+        }else{
+            return code;
+        }
     }
 }

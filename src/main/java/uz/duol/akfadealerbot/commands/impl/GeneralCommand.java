@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import uz.duol.akfadealerbot.commands.Command;
-import uz.duol.akfadealerbot.dto.MessageSend;
+import uz.duol.akfadealerbot.model.dto.MessageSend;
 import uz.duol.akfadealerbot.service.TelegramService;
 import uz.duol.akfadealerbot.utils.KeyboardUtils;
 import uz.duol.akfadealerbot.utils.R;
@@ -34,8 +34,12 @@ public class GeneralCommand implements Command<Long> {
         // Add the settings command
         KeyboardRow firstRow = new KeyboardRow();
         firstRow.add(bundle.getString("label.command.day.end"));
-//        firstRow.add(bundle.getString("label.command.daily"));
         keyboardRows.add(firstRow);
+
+        // Add the web command
+        KeyboardRow secondRow = new KeyboardRow();
+        secondRow.add(bundle.getString("label.direct.web"));
+        keyboardRows.add(secondRow);
 
         // Add the settings command
         KeyboardRow settingsRow = new KeyboardRow();

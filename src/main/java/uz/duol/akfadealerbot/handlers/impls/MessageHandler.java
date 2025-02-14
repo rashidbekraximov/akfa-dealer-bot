@@ -5,11 +5,12 @@ import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import uz.duol.akfadealerbot.commands.Actions;
 import uz.duol.akfadealerbot.commands.impl.*;
-import uz.duol.akfadealerbot.dto.ClientActionDto;
-import uz.duol.akfadealerbot.dto.ClientDto;
+import uz.duol.akfadealerbot.model.dto.ClientActionDto;
+import uz.duol.akfadealerbot.model.dto.ClientDto;
 import uz.duol.akfadealerbot.handlers.Handler;
 import uz.duol.akfadealerbot.service.ClientActionService;
 import uz.duol.akfadealerbot.service.ClientService;
+import uz.duol.akfadealerbot.service.TelegramService;
 import uz.duol.akfadealerbot.service.UserService;
 import uz.duol.akfadealerbot.utils.R;
 
@@ -44,6 +45,10 @@ class MessageHandler implements Handler<Message> {
     private final DetectorCommand detectorCommand;
 
     private final CallDataCommand callDataCommand;
+
+    private final TelegramService telegramService;
+
+    private final DirectWebCommand directWebCommand;
 
     @Override
     public void handle(Message message) {
@@ -85,9 +90,20 @@ class MessageHandler implements Handler<Message> {
             return;
         }
 
+        if (client.getUser() == null && message.getText().length() > 5){
+            requestToVerifyCommand.execute(chatId,client.getLocale());
+            return;
+        }
+
         //TODO Daily End handler
         if (text.equals(R.bundle(locale).getString("label.command.day.end"))) {
-            todayReportCommand.execute(chatId,locale);
+            todayReportCommand.execute(chatId, locale);
+            return;
+        }
+
+        //TODO Direct Web handler
+        if (text.equals(R.bundle(locale).getString("label.direct.web"))) {
+            directWebCommand.execute(chatId, locale);
             return;
         }
 

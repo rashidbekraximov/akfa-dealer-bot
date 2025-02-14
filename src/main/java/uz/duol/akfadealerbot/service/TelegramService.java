@@ -11,10 +11,10 @@ import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import uz.duol.akfadealerbot.dto.ActionSend;
-import uz.duol.akfadealerbot.dto.MediaGroupSend;
-import uz.duol.akfadealerbot.dto.MessageSend;
-import uz.duol.akfadealerbot.dto.PhotoSend;
+import uz.duol.akfadealerbot.model.dto.ActionSend;
+import uz.duol.akfadealerbot.model.dto.MediaGroupSend;
+import uz.duol.akfadealerbot.model.dto.MessageSend;
+import uz.duol.akfadealerbot.model.dto.PhotoSend;
 import uz.duol.akfadealerbot.exception.FailedSendMessageException;
 
 @Service

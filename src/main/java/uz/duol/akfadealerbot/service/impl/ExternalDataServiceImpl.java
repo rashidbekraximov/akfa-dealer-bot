@@ -8,7 +8,8 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import uz.duol.akfadealerbot.dto.*;
+import uz.duol.akfadealerbot.model.dto.*;
+import uz.duol.akfadealerbot.model.response.ApiResponse;
 import uz.duol.akfadealerbot.service.ExternalDataService;
 
 import java.util.Base64;

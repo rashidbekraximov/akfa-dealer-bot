@@ -9,10 +9,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 import uz.duol.akfadealerbot.commands.Actions;
 import uz.duol.akfadealerbot.commands.Command;
 import uz.duol.akfadealerbot.constants.Period;
-import uz.duol.akfadealerbot.dto.ActionSend;
-import uz.duol.akfadealerbot.dto.MessageSend;
-import uz.duol.akfadealerbot.entity.ClientEntity;
-import uz.duol.akfadealerbot.entity.DealerEntity;
+import uz.duol.akfadealerbot.model.dto.ActionSend;
+import uz.duol.akfadealerbot.model.dto.MessageSend;
+import uz.duol.akfadealerbot.model.entity.ClientEntity;
+import uz.duol.akfadealerbot.model.entity.DealerEntity;
 import uz.duol.akfadealerbot.repository.UserRepository;
 import uz.duol.akfadealerbot.service.ClientActionService;
 import uz.duol.akfadealerbot.service.ClientService;
@@ -21,7 +21,6 @@ import uz.duol.akfadealerbot.service.TelegramService;
 import uz.duol.akfadealerbot.utils.KeyboardUtils;
 import uz.duol.akfadealerbot.utils.R;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;

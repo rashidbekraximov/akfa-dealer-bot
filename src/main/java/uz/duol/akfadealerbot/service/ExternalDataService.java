@@ -1,6 +1,7 @@
 package uz.duol.akfadealerbot.service;
 
-import uz.duol.akfadealerbot.dto.*;
+import uz.duol.akfadealerbot.model.dto.*;
+import uz.duol.akfadealerbot.model.response.ApiResponse;
 
 public interface ExternalDataService {
 

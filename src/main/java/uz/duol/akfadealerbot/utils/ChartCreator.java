@@ -8,7 +8,7 @@ import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import uz.duol.akfadealerbot.constants.FilePath;
-import uz.duol.akfadealerbot.dto.*;
+import uz.duol.akfadealerbot.model.dto.*;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

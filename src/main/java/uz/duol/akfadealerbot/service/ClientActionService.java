@@ -1,6 +1,6 @@
 package uz.duol.akfadealerbot.service;
 
-import uz.duol.akfadealerbot.dto.ClientActionDto;
+import uz.duol.akfadealerbot.model.dto.ClientActionDto;
 
 public interface ClientActionService {
 
